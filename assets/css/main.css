@@ -7,6 +7,7 @@
 :root{
     --primary-bg: white;
     --seconday-bg: hsl(47, 98%, 61%);
+    --seconday-txt: black;
 
     --primary-text: black;
     --seconday-text: hsl(47, 98%, 61%);
@@ -193,10 +194,58 @@ nav .mobile-list .social-links svg{
 
 
 #skills {
-    padding-block: 3rem;
+    padding-block: 4rem;
     background-color: var(--seconday-bg);
-    margin-top: -2px;
+    margin-top: -1px;
     color: var(--seconday-txt);
+}
+
+#skills h1.title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#skills .content{
+    --py: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--py);
+    padding-block: var(--py);
+}
+
+#skills .content .skill-card{
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+
+#skills .content .skill-card .skill-img{
+    width: 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+#skills .content .skill-card .skill-img svg{
+    fill: var(--seconday-txt);
+    width: 100%;
+    position: absolute;
+    top: var(--top);
+    left: 0;
+}
+
+#skills .content .skill-card .body .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25em;
+}
+
+#skills .content .skill-card .body p{
+    font-size: 0.875rem;
+    padding-inline: 0.5rem;
 }
 
 
@@ -245,5 +294,14 @@ nav .mobile-list .social-links svg{
     #Hero-Sec .content-wrapper .col-right img{
         position: unset;
         max-width: 200px;
+    }
+
+    #skills h1.title{
+        text-align: left;
+    }
+
+    #skills .content{
+        flex-direction: row;
+        justify-content: space-around;
     }
 }

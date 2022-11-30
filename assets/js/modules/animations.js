@@ -1,5 +1,7 @@
+gsap.registerPlugin(ScrollTrigger)
+
 // animations
-let hamburgerAnimation = gsap.timeline({ paused: true });
+const hamburgerAnimation = gsap.timeline({ paused: true });
 hamburgerAnimation
   .to("#hamburger .top", { y: 28, ease: "back", duration: 0.3 })
   .to("#hamburger .bottom", { y: -28, ease: "back", duration: 0.3 }, "<")
@@ -47,7 +49,7 @@ hamburgerAnimation
     "<"
   );
 
-let heroAnimation = gsap.timeline({ paused: true });
+const heroAnimation = gsap.timeline({ paused: true });
 
 heroAnimation
   .from("#Hero-Sec", { opacity: 0, duration: 1 })
@@ -75,7 +77,7 @@ heroAnimation
     1
   );
 
-let dektopNavAnime = gsap.from("nav.desktop .desktop-list li", {
+const dektopNavAnime = gsap.from("nav.desktop .desktop-list li", {
   y: -10,  
   scale: 0.5,
   opacity: 0,
@@ -88,5 +90,5 @@ let dektopNavAnime = gsap.from("nav.desktop .desktop-list li", {
   delay: 1,
 });
 
-// expots
+// exports
 export { hamburgerAnimation, heroAnimation, dektopNavAnime };
