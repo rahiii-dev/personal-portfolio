@@ -90,5 +90,24 @@ const dektopNavAnime = gsap.from("nav.desktop .desktop-list li", {
   delay: 1,
 });
 
+// scroll animations
+function scrollAnime(items, marker=false){
+  gsap.set(items, {opacity:0, y: 100, duration: 0})
+  items.forEach(item => {
+    ScrollTrigger.create({
+        trigger: item,
+        start: 'top 80%',
+        onEnter: ()=> {
+          gsap.to(item, {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+          })
+        },
+        markers: marker == true ? true : false,
+      });
+  });
+}
+
 // exports
-export { hamburgerAnimation, heroAnimation, dektopNavAnime };
+export { hamburgerAnimation, heroAnimation, dektopNavAnime, scrollAnime };
