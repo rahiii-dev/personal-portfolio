@@ -1,4 +1,6 @@
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
+
+// alert("ok")
 
 // animations
 const hamburgerAnimation = gsap.timeline({ paused: true });
@@ -78,7 +80,7 @@ heroAnimation
   );
 
 const dektopNavAnime = gsap.from("nav.desktop .desktop-list li", {
-  y: -10,  
+  y: -10,
   scale: 0.5,
   opacity: 0,
   stagger: {
@@ -91,23 +93,78 @@ const dektopNavAnime = gsap.from("nav.desktop .desktop-list li", {
 });
 
 // scroll animations
-function scrollAnime(items, marker=false){
-  gsap.set(items, {opacity:0, y: 100, duration: 0})
-  items.forEach(item => {
-    ScrollTrigger.create({
-        trigger: item,
-        start: 'top 90%',
-        onEnter: ()=> {
-          gsap.to(item, {
-            y: 0,
-            opacity: 1,
-            duration: 0.8,
-          })
-        },
-        markers: marker == true ? true : false,
-      });
-  });
+function skillScroll(marker=false){
+  const skills = gsap.utils.toArray('.skill-card')
+    gsap.set(skills, {opacity:0, y: 100, duration: 0})
+    skills.forEach(skill => {
+      ScrollTrigger.create({
+          trigger: skill,
+          start: 'top 90%',
+          onEnter: ()=> {
+            $('#skills').css('background', 'red');
+            gsap.to(skill, {
+              y: 0,
+              opacity: 1,
+              duration: 0.8,
+            })
+          },
+          markers: marker == true ? true : false,
+        });
+    });
 }
 
-// exports
-export { hamburgerAnimation, heroAnimation, dektopNavAnime, scrollAnime };
+function aboutScroll(marker=false){
+  const AboutSec = document.querySelector('#about .container .content .body')
+    const AboutSecImg = AboutSec.querySelector('img.about-img')
+    const AboutSecDesc = AboutSec.querySelector('.description')
+
+    gsap.set(AboutSecImg, {
+      x: -200,
+      opacity: 0,
+    })
+    gsap.set(AboutSecDesc, {
+      opacity: 0
+    })
+    
+    let AboutSecAnime = gsap.timeline({paused:true})
+    AboutSecAnime.to(AboutSec, {
+      opacity: 1,
+      duration: 1
+    })
+    .to(AboutSecImg, {
+      x: 0,
+      opacity: 1,
+      duration: 1,
+    }, "<")
+    .to(AboutSecDesc, {
+      opacity: 1,
+      duration: 1,
+    }, "<")
+
+    ScrollTrigger.create({
+      trigger: AboutSec,
+      start: 'top 80%',
+      onEnter: ()=> {
+        AboutSecAnime.play()
+      },
+      markers: marker == true ? true : false,
+    });
+}
+// function scrollAnime(items, marker=true){
+//   gsap.set(items, {opacity:0, y: 100, duration: 0})
+//   items.forEach(item => {
+//     ScrollTrigger.create({
+//         trigger: item,
+//         start: 'top 90%',
+//         onEnter: ()=> {
+//           alert("entered")
+//           gsap.to(item, {
+//             y: 0,
+//             opacity: 1,
+//             duration: 0.8,
+//           })
+//         },
+//         markers: marker == true ? true : false,
+//       });
+//   });
+// }
