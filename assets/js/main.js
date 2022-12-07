@@ -1,5 +1,3 @@
-// gsap.registerPlugin(ScrollTrigger);
-
 $(document).ready(function () {
   // init
   function init() {
