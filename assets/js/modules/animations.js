@@ -101,7 +101,6 @@ function skillScroll(marker=false){
           trigger: skill,
           start: 'top 90%',
           onEnter: ()=> {
-            $('#skills').css('background', 'red');
             gsap.to(skill, {
               y: 0,
               opacity: 1,
@@ -150,21 +149,4 @@ function aboutScroll(marker=false){
       markers: marker == true ? true : false,
     });
 }
-// function scrollAnime(items, marker=true){
-//   gsap.set(items, {opacity:0, y: 100, duration: 0})
-//   items.forEach(item => {
-//     ScrollTrigger.create({
-//         trigger: item,
-//         start: 'top 90%',
-//         onEnter: ()=> {
-//           alert("entered")
-//           gsap.to(item, {
-//             y: 0,
-//             opacity: 1,
-//             duration: 0.8,
-//           })
-//         },
-//         markers: marker == true ? true : false,
-//       });
-//   });
-// }
+
