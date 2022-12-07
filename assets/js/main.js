@@ -53,12 +53,28 @@ $(document).ready(function () {
  
   // events
   $("#hamburger").click(function (e) {
+    let vh = $('#Hero-Sec').height();
+
+    $(this).toggleClass('active');
+
     if ($(this).hasClass("active")) {
       hamburgerAnimation.play();
-      $(this).removeClass("active");
+      $(document.body).css({
+        'height': `${vh}px`,
+        'overflow-y': 'hidden'
+      });
     } else {
       hamburgerAnimation.reverse();
-      $(this).addClass("active");
+      $(document.body).css({
+        'height': `100%`,
+        'overflow-y': 'auto',
+      });
     }
   });
+
+  $("#contact .container .content form").submit(function (e) { 
+    e.preventDefault();
+    
+  });
+
 });

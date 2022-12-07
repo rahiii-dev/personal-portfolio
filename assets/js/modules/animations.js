@@ -96,7 +96,7 @@ function scrollAnime(items, marker=false){
   items.forEach(item => {
     ScrollTrigger.create({
         trigger: item,
-        start: 'top 80%',
+        start: 'top 90%',
         onEnter: ()=> {
           gsap.to(item, {
             y: 0,
