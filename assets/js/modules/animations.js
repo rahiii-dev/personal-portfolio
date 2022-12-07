@@ -1,7 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// alert("ok")
-
 // animations
 const hamburgerAnimation = gsap.timeline({ paused: true });
 hamburgerAnimation

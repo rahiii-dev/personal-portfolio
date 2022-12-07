@@ -12,6 +12,10 @@ $(document).ready(function () {
   init()
 
   //   functions
+  $(window).resize(function () { 
+    console.log("resize")
+    ScrollTrigger.refresh()
+  });
  
   // events
   $("#hamburger").click(function (e) {
