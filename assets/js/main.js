@@ -45,6 +45,25 @@ $(document).ready(function () {
     }
   });
 
+  $('li.nav-item a.nav-link').click(function (e) { 
+    e.preventDefault();
+
+    let scrollPageTo = $(this).attr('data-scrollTO');
+
+    if (scrollPageTo != undefined || scrollPageTo != null){
+      // alert(scrollTo)
+      if ($('#hamburger').hasClass("active")) {
+        $('#hamburger').toggleClass("active");
+        hamburgerAnimation.reverse();
+        $(document.body).css({
+          height: `auto`,
+          "overflow-y": "auto",
+        });
+      }
+      gsap.to(window, {duration: 2, scrollTo: scrollPageTo});
+    }
+  });
+
   $("#contact .container .content form").submit(function (e) {
     e.preventDefault();
   });
