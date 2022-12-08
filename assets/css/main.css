@@ -270,7 +270,8 @@ nav .mobile-list .social-links svg{
     border: 5px solid var(--primary-text);
     border-radius: 1rem;
     position: relative;
-    padding: calc(var(--img-size) / 2.5) 1.5rem;
+    padding: 1.5rem;
+    padding-top: calc(var(--img-size) / 2);
     margin: calc(var(--img-size) / 2.5);
     opacity: 0;
 }
