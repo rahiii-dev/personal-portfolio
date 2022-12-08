@@ -51,7 +51,6 @@ $(document).ready(function () {
     let scrollPageTo = $(this).attr('data-scrollTO');
 
     if (scrollPageTo != undefined || scrollPageTo != null){
-      // alert(scrollTo)
       if ($('#hamburger').hasClass("active")) {
         $('#hamburger').toggleClass("active");
         hamburgerAnimation.reverse();
