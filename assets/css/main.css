@@ -15,11 +15,6 @@
     --font: 'Poppins', sans-serif;
 }
 
-html, body{
-    height: 100%;
-    overflow-x: hidden !important;
-}
-
 body{
     --vh: 1vh;
     --height: calc(var(--vh, 1vh) * 100);
@@ -29,8 +24,6 @@ body{
     color: var(--primary-text);
     line-height: 1.2;
     position: relative;
-    min-height: 100vh;
-    width: 100%;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -74,6 +67,12 @@ a.btn-primary{
 .btn-secondary, a.btn-secondary{
     background-color: var(--seconday-txt);
     color: var(--primary-bg);
+}
+
+/* maun */
+main {
+    position: relative;
+    overflow-x: hidden !important;
 }
 
 /* header */

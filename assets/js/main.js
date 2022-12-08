@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(document.body).css("--vh", `${vh}px`);
     heroAnimation.play();
     dektopNavAnime.play()
-    skillScroll(true)
+    skillScroll()
     aboutScroll()
   }
 
@@ -32,7 +32,7 @@ $(document).ready(function () {
     } else {
       hamburgerAnimation.reverse();
       $(document.body).css({
-        'height': `100%`,
+        'height': `auto`,
         'overflow-y': 'auto',
       });
     }
