@@ -212,7 +212,7 @@ nav .mobile-list .social-links svg{
     text-align: center;
 }
 
-#skills, #contact {
+#skills, #contact, footer {
     background-color: var(--seconday-bg);
     margin-top: -1px;
     color: var(--seconday-txt);
@@ -310,6 +310,13 @@ nav .mobile-list .social-links svg{
     justify-content: center;
     margin-top: 1rem;
 }
+
+footer div{
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid var(--seconday-txt);
+    padding: 1.5rem 1rem;
+}
 /* tablet */
 @media screen and (min-width: 790px){
     nav.mobile{
@@ -368,5 +375,8 @@ nav .mobile-list .social-links svg{
     #about .container .content .body{
         max-width: 500px;
         margin-inline: auto;
+    }
+    footer div{
+        border-top: 0;
     }
 }
