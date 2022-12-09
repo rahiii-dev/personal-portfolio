@@ -215,6 +215,10 @@ nav .mobile-list .social-links {
   justify-content: space-around;
 }
 
+nav .mobile-list .social-links a{
+  padding: 0.5em;
+}
+
 nav .mobile-list .social-links svg {
   scale: 1.5;
 }
