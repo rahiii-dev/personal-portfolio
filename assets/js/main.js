@@ -22,6 +22,8 @@ $(document).ready(function () {
   //   functions
   $(window).resize(function () {
     ScrollTrigger.refresh();
+    let vh = window.innerHeight * 0.01;
+    $(document.body).css("--vh", `${vh}px`);
   });
 
   // events

@@ -7,10 +7,9 @@
 :root {
   --primary-bg: white;
   --seconday-bg: hsl(47, 98%, 61%);
+  
   --seconday-txt: black;
-
   --primary-text: black;
-  --seconday-text: hsl(47, 98%, 61%);
 
   --font: "Poppins", sans-serif;
 }
@@ -27,11 +26,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-body.dark {
-  --primary-bg: hsl(0, 0%, 0%);
-  --primary-text: hsl(0, 0%, 100%);
-}
-
+/* preloader */
 #loading {
   position: fixed;
   display: flex;
@@ -124,7 +119,7 @@ a.btn-secondary {
 
 .btn-primary,
 a.btn-primary {
-  background-color: var(--seconday-text);
+  background-color: var(--seconday-bg);
   color: var(--primary-bg);
 }
 
@@ -248,7 +243,7 @@ nav .mobile-list .social-links svg {
   line-height: 0.9;
   font-size: clamp(2rem, 11vw, 4rem);
   font-weight: 600;
-  color: var(--seconday-text) !important;
+  color: var(--seconday-bg) !important;
   margin-bottom: 2rem;
   white-space: nowrap;
 }
